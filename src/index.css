@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Raleway', system-ui, sans-serif;
+    --font-barlow: 'Barlow', system-ui, sans-serif;
+    --font-body: 'Work Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #070c18;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.font-barlow {
+  font-family: 'Barlow', sans-serif;
+}
+
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-work {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.contax-gradient {
+  background: linear-gradient(135deg, #006cff 0%, #6f0fff 100%);
+}
+
+.contax-gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Classes: Gliding Liquid Glass */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(0, 47, 108, 0.08);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 50px -12px rgba(0, 108, 255, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Continuous Hardware-Accelerated Marquees */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  -webkit-animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+  -webkit-animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+/* Super Slow, Calm, Glass-Like Glide for Testimonials (110s) */
+.animate-marquee-super-slow {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 110s linear infinite;
+  -webkit-animation: marquee 110s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.animate-marquee-slow:hover,
+.animate-marquee-super-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}

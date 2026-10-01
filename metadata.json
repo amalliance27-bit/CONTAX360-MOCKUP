@@ -1,0 +1,8 @@
+{
+  "name": "Contax360 BPO Solutions - AI Tour with Pandora Lee",
+  "description": "Interactive showcase and infomercial tour guide for Contax360 BPO & KPO Solutions featuring AI tour guide Pandora Lee, virtual hiring room, nearshore & onshore operations, and services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
